@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manager Library — catalog, members, loans and reports for a small library.">
+  <title>Manager Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <span class="brand">Manager Library</span>
+      <span class="tag">ADSO 3145556 · SDD technical test</span>
+    </nav>
+    <h1>A small library, fully managed.</h1>
+    <p>Catalog, members, loans, returns, overdue tracking and most-borrowed reports — one system, two roles.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>What it does</h2>
+      <div class="grid">
+        <article>
+          <h3>Catalog</h3>
+          <p>Books with author, 13-digit ISBN, five fixed categories, copy counts and optional cover. Searchable by title or author.</p>
+        </article>
+        <article>
+          <h3>Members</h3>
+          <p>Borrowers with unique document numbers. No deletions, full history kept.</p>
+        </article>
+        <article>
+          <h3>Loans</h3>
+          <p>One member, 1–3 books, 14-day terms. A member with overdue books or 3 open books cannot borrow more.</p>
+        </article>
+        <article>
+          <h3>Returns &amp; overdue</h3>
+          <p>Line-by-line returns, never counted twice. Overdue list sorted by days late.</p>
+        </article>
+        <article>
+          <h3>Reports</h3>
+          <p>Most-borrowed books per period, grouped by frozen catalog values — renaming a book never rewrites history.</p>
+        </article>
+        <article>
+          <h3>Roles</h3>
+          <p>Admins manage catalog, members and librarians; librarians register loans and returns. Token-based access.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>How it is built</h2>
+      <div class="grid">
+        <article>
+          <h3>API</h3>
+          <p>PHP with Laravel. Hexagonal architecture, single versioned contract under <code>/api/v1</code>.</p>
+        </article>
+        <article>
+          <h3>App</h3>
+          <p>React operations frontend: login, catalog, loans, overdue, reports.</p>
+        </article>
+        <article>
+          <h3>Infra &amp; tool</h3>
+          <p>One-command Docker setup with an empty Postgres engine; demo-data seeder through the API.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Manager Library · technical test · static presentation page (calls no API).</p>
+  </footer>
+</body>
+</html>
